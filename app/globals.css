@@ -3,13 +3,84 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --canvas: #08080a;
+  --surface: #0c0c0d;
+  --surface-raised: #101013;
+  --hairline: #26262a;
+  --hairline-inner: #1c1c20;
+  --label: #6b6b70;
+  --secondary: #9a9a9f;
+  --primary-text: #f2f2f0;
+  --body-text: #c9c9cc;
+  --accent: #4fd18b;
+  --validation: #d9a441;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-hairline: var(--hairline);
+  --color-hairline-inner: var(--hairline-inner);
+  --color-label: var(--label);
+  --color-secondary: var(--secondary);
+  --color-primary-text: var(--primary-text);
+  --color-body-text: var(--body-text);
+  --color-accent: var(--accent);
+  --color-validation: var(--validation);
+
+  /* 02 / typography */
+  --text-display-lg: 4rem; /* 64px */
+  --text-display-lg--line-height: 1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-md: 3.5rem; /* 56px */
+  --text-display-md--line-height: 1;
+  --text-display-md--letter-spacing: -0.02em;
+  --text-display-sm: 3rem; /* 48px */
+  --text-display-sm--line-height: 1;
+  --text-display-sm--letter-spacing: -0.02em;
+
+  --text-heading-lg: 1.75rem; /* 28px */
+  --text-heading-lg--line-height: 1.2;
+  --text-heading-sm: 1.5rem; /* 24px */
+  --text-heading-sm--line-height: 1.2;
+
+  --text-body: 1.0625rem; /* 17px */
+  --text-body--line-height: 1.7;
+
+  --text-nav: 0.8125rem; /* 13px, mono */
+  --text-nav--line-height: 1.4;
+  --text-metadata: 0.75rem; /* 12px, mono */
+  --text-metadata--line-height: 1.4;
+
+  /* 03 / grid & space (8/12/16/24/32/48/64/96 rhythm matches Tailwind's default spacing scale) */
+  --container-desktop: 90rem; /* 1440px max */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+
+  /* 04 / motion */
+  --ease-hover: linear;
+  --duration-hover: 120ms;
+  --duration-page-enter: 240ms;
+  --animate-cursor-blink: cursor-blink 1.1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +93,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
