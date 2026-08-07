@@ -52,8 +52,19 @@ export default function Navbar() {
 			</div>
 
 			<div className="flex gap-2 items-center">
-				<div className="w-2 h-2 bg-accent" />
-				<p className="font-mono text-nav text-body-text">{profile.availabilityStatus}</p>
+				<div className={`w-2 h-2 ${
+						profile.isAvailable
+						? 'bg-accent'
+						: 'bg-label'
+					}`} />
+				<p className={`font-mono text-nav ${
+					profile.isAvailable
+					? 'text-body-text'
+					: 'text-label'
+				}`}
+				>
+					{profile.availabilityStatus}
+				</p>
 			</div>
 		</div>
 	)

@@ -4,6 +4,7 @@ export interface Profile {
 	based: string;
 	status: string;
 	availabilityStatus: string;
+	isAvailable: boolean;
 }
 
 export const profile: Profile = {
@@ -12,4 +13,5 @@ export const profile: Profile = {
 	based: "remote",
 	status: "open - q3 2026",
 	availabilityStatus: "available for work",
+	isAvailable: true,
 }
