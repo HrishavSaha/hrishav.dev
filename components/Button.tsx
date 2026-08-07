@@ -17,7 +17,7 @@ type CommonProps = {
 	className?: string;
 };
 
-type LinkProps<T extends string> = CommonProps & { href: Route<T> | URL } & Omit<ComponentProps<typeof Link>, "href" | "className">;
+type LinkProps<T extends string> = CommonProps & { href: Route<T> } & Omit<ComponentProps<typeof Link>, "href" | "className">;
 type ButtonElementProps = CommonProps & { href?: undefined } & Omit<ComponentProps<"button">, "className">;
 
 type ButtonProps<T extends string> = LinkProps<T> | ButtonElementProps;
