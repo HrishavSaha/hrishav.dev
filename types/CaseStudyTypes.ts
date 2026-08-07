@@ -1,3 +1,5 @@
+import type { Route } from "next";
+
 export type metadata = {
 	title: string;
 	summary: string;
@@ -8,4 +10,13 @@ export type metadata = {
 export type spec = {
 	label: string;
 	value: string;
+}
+
+export type CaseStudyNav = {
+	prevHref: Route;
+	nextHref: Route;
+}
+
+export type CaseStudyProps = {
+	nav: CaseStudyNav;
 }

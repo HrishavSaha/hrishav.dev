@@ -1,31 +1,32 @@
-import { metadata } from "@/types/CaseStudyTypes";
+import { metadata, CaseStudyNav } from "@/types/CaseStudyTypes";
 import Button from "./Button";
 
 type HeaderProps = {
 	index: number;
 	metadata: metadata;
+	nav: CaseStudyNav;
 }
 
-export default function Header({index, metadata}: HeaderProps) {
+export default function Header({index, metadata, nav}: HeaderProps) {
 	return (
 		<div className="w-full flex border-b border-hairline">
 			<div className="flex flex-col w-3/4 px-12 py-30 gap-8 border-r border-hairline">
-				<p className="font-mono text-nav text-secondary">{index} / case study</p>
+				<p className="font-mono text-nav text-secondary">{index < 10 ? 0 : null}{index} / case study</p>
 
 				<p className="font-sans text-display-md font-medium text-primary-text">
 					{metadata.title}
 				</p>
 
-				<p className="font-sans text-body font-medium text-body-text">
+				<p className="w-3/4 font-sans text-body font-medium text-body-text">
 					{metadata?.summary}
 				</p>
 
 				<div className="flex gap-6">
-				<Button href="/work" variant='secondary'>
+				<Button href={nav.prevHref} variant='secondary'>
 					← prev project
 				</Button>
 
-				<Button href="/contact" variant='secondary'>
+				<Button href={nav.nextHref} variant='secondary'>
 					next project →
 				</Button>
 				</div>

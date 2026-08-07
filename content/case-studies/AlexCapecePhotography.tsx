@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
-import { type metadata } from "@/types/CaseStudyTypes";
+import { type metadata, type CaseStudyProps } from "@/types/CaseStudyTypes";
 
 const metadata: metadata = {
 	title: 'alex capece photography',
-	summary: 'a fast, self-updatable portfolio site for a washington, d.c. documentary photopgraher, built solo, from a client-provided design, in one week.',
+	summary: 'a fast, self-updatable portfolio site for a washington, d.c. documentary photopgrapher, built solo, from a client-provided design, in one week.',
 	specs: [
 		{ label: 'role', value: 'front-end' },
 		{ label: 'design', value: 'provided by client' },
@@ -13,8 +13,8 @@ const metadata: metadata = {
 	liveURL: 'alexcapece.com'
 }
 
-export default function AlexCapecePhotography({}) {
+export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 	return (
-		<Header index={1} metadata={metadata} />
+		<Header index={1} metadata={metadata} nav={nav} />
 	)
 }
