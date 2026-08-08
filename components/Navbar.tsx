@@ -38,7 +38,7 @@ export default function Navbar() {
 	return (
 		<div className="w-full flex items-center justify-between px-12 py-6 bg-surface border-b border-hairline">
 
-			<Link href='/' className="font-mono text-body text-primary-text">hrishav<span className="text-label">.dev</span></Link>
+			<Link href='/' className="font-mono text-body text-primary-text">hrishav<span className="text-accent">.dev</span></Link>
 
 			<div className="flex gap-6 items-center font-mono text-nav">
 				{NAV_LINKS.map((link, index) => {
