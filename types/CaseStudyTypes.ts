@@ -14,7 +14,9 @@ export type spec = {
 
 export type CaseStudyNav = {
 	prevHref: Route;
+	prevLabel: string;
 	nextHref: Route;
+	nextLabel: string;
 }
 
 export type CaseStudyProps = {
