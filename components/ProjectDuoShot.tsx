@@ -10,7 +10,6 @@ type ProjectDuoShotProps = {
 	mobile: Shot;
 	aspectRatio?: string;
 	laptopWidth?: string;
-	preload?: boolean;
 };
 
 export default function ProjectDuoShot({
@@ -18,7 +17,6 @@ export default function ProjectDuoShot({
 	mobile,
 	aspectRatio = "16/7",
 	laptopWidth = "65%",
-	preload = false,
 }: ProjectDuoShotProps) {
 	const laptopWidthValue = parseFloat(laptopWidth);
 	const laptopSizes = `${laptopWidthValue}vw`;
@@ -38,7 +36,7 @@ export default function ProjectDuoShot({
 					alt={laptop.alt}
 					fill
 					sizes={laptopSizes}
-					preload={preload}
+					loading='eager'
 					className="object-cover object-top"
 				/>
 			</div>
@@ -49,7 +47,7 @@ export default function ProjectDuoShot({
 					alt={mobile.alt}
 					fill
 					sizes={mobileSizes}
-					preload={preload}
+					loading='eager'
 					className="object-cover object-top"
 				/>
 			</div>
