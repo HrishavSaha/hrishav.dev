@@ -25,7 +25,7 @@ export default function PhotoShot({ images, aspectRatio = "1/1" }: PhotoShotProp
 						src={shot.src}
 						alt={shot.alt}
 						fill
-						sizes={`${Math.round(100 / shots.length)}vw`}
+						sizes={`${Math.round(50 / shots.length)}vw`}
 						className="object-cover object-top-left"
 					/>
 				</div>

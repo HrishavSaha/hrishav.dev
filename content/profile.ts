@@ -6,6 +6,11 @@ export interface Profile {
 	status: string;
 	availabilityStatus: string;
 	isAvailable: boolean;
+	socials: {
+		email: string;
+		github: string;
+		linkedin: string;
+	};
 }
 
 export const profile: Profile = {
@@ -16,4 +21,9 @@ export const profile: Profile = {
 	status: "open - q3 2026",
 	availabilityStatus: "available for work",
 	isAvailable: true,
+	socials: {
+		email: "hrishav.saha@gmail.com",
+		github: "https://github.com/HrishavSaha",
+		linkedin: "https://linkedin.com/in/hrishavsaha",
+	},
 }

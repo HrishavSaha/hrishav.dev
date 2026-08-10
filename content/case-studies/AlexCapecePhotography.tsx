@@ -33,6 +33,7 @@ export const metadata: CaseStudyMetadata = {
 		{ label: 'duration', value: '1 week' },
 		{ label: 'stack', value: 'next · ts' },
 	],
+	status: 'live',
 	liveURL: 'alexcapece.com'
 }
 
