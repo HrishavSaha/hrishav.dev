@@ -24,7 +24,7 @@ const HOW_I_WORK = [
 
 export default function About() {
 	return (
-		<div className="w-full min-h-screen bg-surface flex border-b border-hairline">
+		<div className="w-full min-h-[calc(100vh-var(--spacing-nav))] bg-surface flex border-b border-hairline">
 			<div className="w-1/2 flex flex-col gap-8 px-12 py-16 border-r border-hairline">
 				<p className="font-mono text-nav text-secondary">01 / about</p>
 

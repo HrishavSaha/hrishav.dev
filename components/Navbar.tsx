@@ -42,7 +42,7 @@ export default function Navbar() {
 	const pathname = usePathname();
 
 	return (
-		<div className="relative w-full flex items-center justify-between px-12 py-6 bg-surface border-b border-hairline">
+		<div className="fixed inset-x-0 top-0 z-50 h-nav w-full flex items-center justify-between px-12 bg-surface border-b border-hairline">
 			<LoadingBar />
 
 			<Link href='/' className="font-mono text-body text-primary-text">hrishav<span className="text-accent">.dev</span></Link>

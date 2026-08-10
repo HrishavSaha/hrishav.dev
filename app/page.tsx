@@ -3,7 +3,7 @@ import { profile } from "@/content/profile";
 
 export default function Home() {
 	return (
-		<div className="w-full min-h-screen bg-surface">
+		<div className="w-full min-h-[calc(100vh-var(--spacing-nav))] bg-surface">
 			<div className="w-full flex border-b border-hairline">
 				<div className="flex flex-col w-3/4 px-12 py-30 gap-8 border-r border-hairline">
 					<p className="font-mono text-nav text-secondary">01 / index</p>

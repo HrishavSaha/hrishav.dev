@@ -61,6 +61,7 @@
 
   /* 03 / grid & space (8/12/16/24/32/48/64/96 rhythm matches Tailwind's default spacing scale) */
   --container-desktop: 90rem; /* 1440px max */
+  --spacing-nav: 4rem; /* fixed Navbar height — also used to offset page content below it */
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;

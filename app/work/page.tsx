@@ -16,7 +16,7 @@ const caseStudyIds = Object.keys(
 
 export default function Work() {
 	return (
-		<div className="w-full min-h-screen bg-surface flex flex-col">
+		<div className="w-full min-h-[calc(100vh-var(--spacing-nav))] bg-surface flex flex-col">
 			<div className="w-full flex items-end justify-between px-12 py-16 border-b border-hairline">
 				<div className="flex flex-col gap-8">
 					<p className="font-mono text-nav text-secondary">02 / work</p>

@@ -29,7 +29,7 @@ export default async function CaseStudy(
 	const CaseStudyComponent = caseStudy.component;
 
 	return (
-		<div className="w-full min-h-screen bg-surface">
+		<div className="w-full min-h-[calc(100vh-var(--spacing-nav))] bg-surface">
 			<CaseStudyComponent
 				nav={{
 					prevHref: `/work/${prevId}` as Route,
