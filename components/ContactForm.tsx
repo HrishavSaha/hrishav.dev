@@ -38,14 +38,6 @@ function fieldBorder(hasError: boolean) {
 	}`;
 }
 
-function makeReference() {
-	const now = new Date();
-	const yy = String(now.getFullYear()).slice(-2);
-	const mm = String(now.getMonth() + 1).padStart(2, "0");
-	const id = crypto.randomUUID().replace(/-/g, "").slice(0, 4);
-	return `brief-${yy}${mm}-${id}`;
-}
-
 function validate(fields: Fields): Errors {
 	const errors: Errors = {};
 
@@ -81,7 +73,7 @@ export default function ContactForm() {
 		setErrors((current) => (current[key] ? { ...current, [key]: undefined } : current));
 	}
 
-	function handleSubmit(event: FormEvent) {
+	async function handleSubmit(event: FormEvent) {
 		event.preventDefault();
 
 		const nextErrors = validate(fields);
@@ -89,11 +81,24 @@ export default function ContactForm() {
 		if (Object.keys(nextErrors).length > 0) return;
 
 		setStatus("sending");
-		window.setTimeout(() => {
-			setReference(makeReference());
+
+		try {
+			const response = await fetch("/api/send", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(fields),
+			});
+
+			if (!response.ok) throw new Error("send failed");
+
+			const data: { reference: string } = await response.json();
+			setReference(data.reference);
 			setSentTo(fields.email.trim());
 			setStatus("success");
-		}, 900);
+		} catch {
+			setErrors({ brief: "couldn't send that - try again or email me directly" });
+			setStatus("idle");
+		}
 	}
 
 	function reset() {
