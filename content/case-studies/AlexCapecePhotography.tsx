@@ -44,7 +44,7 @@ export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 		<ProjectDuoShot laptop={laptop} mobile={mobile} laptopWidth="80%" />
 
 		<Section index={1} label="problem">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				alex came to me with no existing site and a clear visual direction already in mind: a full-bleed,
 				single-column scroll of documentary images with editorial captions underneath, minimal navigation,
 				nothing to distract from the photography itself. my job was to take that vision and turn it into
@@ -54,7 +54,7 @@ export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={2} label="role & process">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				i handled the build end-to-end: front-end development, converting his source images from png to
 				webp, buying and configuring the domain, and deployment. alex was decisive about the visual
 				direction, so most of my input was structural - where his design needed adjustment to translate
@@ -65,13 +65,13 @@ export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={3} label="solution">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				because this was a lightweight portfolio rather than a content-heavy site, i made a deliberate
 				call: skip a cms and backend entirely. adding that infrastructure would have meant more moving
 				parts, slower load times, and ongoing maintenance for a site that just needed to be fast and
 				simple.
 			</p>
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				instead, i built a plain-folder-and-data-file-system. alex adds an image to a folder and updates a
 				simple images.ts file to control what shows, in what order. to make that accessible to a non-developer,
 				i recorded a set of walkthrough videos showing him exactly how to add, remove, reorder, and update
@@ -86,7 +86,7 @@ export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 				<Statistic value="1 wk" label="spec to launch" />
 				<Statistic value="0" label="backed dependencies" />
 			</div>
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				the site loads a large, image-heavy portfolio without any perceptible lag, and gives alex full
 				control to update his work without touching a line of code. it&apos;s live and serving as his
 				primary portfolio for assignments and inquiries.
@@ -104,7 +104,7 @@ export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={5} label="takeaway">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				not every project needs a cms. sometimes the right technical decision is the one that adds the
 				least - a plain-file content system and a short set of tutorial videos gave alex full independence
 				without adding a single point of backend failure.

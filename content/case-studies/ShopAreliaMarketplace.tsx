@@ -43,7 +43,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 		<ProjectDuoShot laptop={laptop} mobile={mobile} laptopWidth="80%" />
 
 		<Section index={1} label="problem">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				freddy came to me with an idea, not a product — no existing site, no mvp to iterate on. he'd
 				noticed that nonprofit merch tends to be scattered across dozens of separate stores
 				(squarespace shops, bonfire campaigns, and everything in between), and that people are often more
@@ -54,7 +54,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={2} label="role & process">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				this was a solo project end to end — i owned both the design and the full build, working directly
 				with freddy from the initial idea through launch. since arelia was an early-stage venture and
 				freddy was intentional about not over-investing in infrastructure before it was actually needed,
@@ -66,7 +66,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={3} label="solution">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				the real technical challenge was giving shoppers one consistent browsing experience across products
 				that don't actually live on arelia at all — each nonprofit sells through its own separate platform,
 				each with a completely different page structure and image hosting setup. rather than trying to
@@ -86,7 +86,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 				<Statistic value="14" label="nonprofits integrated" />
 				<Statistic value="0%" label="platform fee" />
 			</div>
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				arelia launched with 14 verified nonprofits and 100+ products live on day one, aggregated into a single,
 				fast browsing experience — pagespeed scores sit in the high 90s site-wide. freddy brought me on for
 				ongoing maintenance and catalog management after launch, which has kept this an active, evolving project
@@ -105,7 +105,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={5} label="takeaway">
-			<p className="font-sans text-body text-body-text">
+			<p className="font-sans text-body text-body-text lowercase">
 				not every early-stage product needs enterprise infrastructure. a custom, purpose-built admin
 				system — scoped tightly to what the business actually needed at this stage — got arelia to market
 				in four weeks without carrying unnecessary overhead, while leaving room to grow into something
