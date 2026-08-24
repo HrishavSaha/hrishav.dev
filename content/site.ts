@@ -1,10 +1,29 @@
 import { profile } from "./profile";
 
 /**
- * canonical origin for metadata, sitemap and og image urls. override per
- * environment (preview deploys, staging) with NEXT_PUBLIC_SITE_URL.
+ * canonical origin for metadata, sitemap and og image urls.
+ *
+ * social scrapers fetch og:image as an absolute url, so this has to be a host
+ * that actually serves the site — a hardcoded domain that isn't live yet means
+ * no preview image anywhere. resolution order:
+ *   1. NEXT_PUBLIC_SITE_URL — explicit override, set this once the real domain is live
+ *   2. VERCEL_PROJECT_PRODUCTION_URL — the project's production domain, which
+ *      vercel updates to the custom domain automatically once one is attached
+ *   3. VERCEL_URL — this specific deployment, for previews before a production alias
+ *   4. localhost, for `next dev` / `next start`
  */
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://hrishav.dev").replace(/\/$/, "");
+function resolveSiteUrl() {
+	const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+	if (explicit) return explicit;
+
+	const vercelHost =
+		process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+	if (vercelHost) return `https://${vercelHost}`;
+
+	return "http://localhost:3000";
+}
+
+export const siteUrl = resolveSiteUrl().replace(/\/$/, "");
 
 export const site = {
 	url: siteUrl,
