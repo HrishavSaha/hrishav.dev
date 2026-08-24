@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { profile } from "@/content/profile";
 
 const padIndex = (index: number) => `${index < 10 ? "0" : ""}${index}`;
 
@@ -45,8 +47,15 @@ export default function About() {
 					hold the whole thing - not a designer waiting on a developer, or the reverse.
 				</p>
 
-				<div className="flex-1 w-full flex items-center justify-center border border-hairline-inner bg-surface-raised min-h-48 sm:min-h-64">
-					<p className="font-mono text-nav text-label">[ portrait placeholder ]</p>
+				<div className="relative flex-1 w-full border border-hairline-inner bg-surface-raised min-h-80 sm:min-h-96 lg:min-h-100">
+					<Image
+						src="/images/portrait.jpg"
+						alt={`${profile.name} - portrait`}
+						fill
+						loading='eager'
+						sizes="(max-width: 1024px) 100vw, 50vw"
+						className="object-cover object-center"
+					/>
 				</div>
 			</div>
 
