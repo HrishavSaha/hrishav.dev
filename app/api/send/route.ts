@@ -42,7 +42,7 @@ export async function POST(request: Request) {
 	const { error } = await resend.emails.send({
 		from: "hrishav.dev <onboarding@resend.dev>",
 		to: profile.socials.email,
-		cc: email.trim(),
+		// cc: email.trim(),
 		replyTo: email.trim(),
 		subject: `project brief — ${name.trim()} (${reference})`,
 		react: EmailTemplate({
