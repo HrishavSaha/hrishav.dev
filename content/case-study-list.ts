@@ -23,7 +23,7 @@ export const CaseStudyList = {
 			src: '/images/AlexCapecePhotographyDesktop.png',
 			alt: 'alex capece photography — desktop view',
 		},
-		year: '2025',
+		year: '2026',
 	},
 	'arelia-shop-with-purpose': {
 		component: AreliaShopWithPurpose,

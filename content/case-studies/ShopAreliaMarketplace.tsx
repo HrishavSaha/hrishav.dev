@@ -81,7 +81,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={4} label="result">
-			<div className="flex gap-12">
+			<div className="flex flex-wrap gap-8 sm:gap-12">
 				<Statistic value="~99" label="lighthouse performance" accent />
 				<Statistic value="14" label="nonprofits integrated" />
 				<Statistic value="0%" label="platform fee" />

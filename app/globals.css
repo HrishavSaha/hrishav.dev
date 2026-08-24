@@ -45,6 +45,9 @@
   --text-display-sm: 3rem; /* 48px */
   --text-display-sm--line-height: 1;
   --text-display-sm--letter-spacing: -0.02em;
+  --text-display-xs: 2rem; /* 32px — display size for narrow viewports */
+  --text-display-xs--line-height: 1.05;
+  --text-display-xs--letter-spacing: -0.02em;
 
   --text-heading-lg: 1.75rem; /* 28px */
   --text-heading-lg--line-height: 1.2;

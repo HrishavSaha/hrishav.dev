@@ -73,7 +73,7 @@ export default function FernAndFlourCafe({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={4} label="result">
-			<div className="flex gap-12">
+			<div className="flex flex-wrap gap-8 sm:gap-12">
 				<Statistic value="~92" label="lighthouse performance" accent />
 				<Statistic value="3" label="days, concept to finished" />
 			</div>

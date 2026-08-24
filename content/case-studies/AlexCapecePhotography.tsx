@@ -81,7 +81,7 @@ export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 		</Section>
 
 		<Section index={4} label="result">
-			<div className="flex gap-12">
+			<div className="flex flex-wrap gap-8 sm:gap-12">
 				<Statistic value="~95" label="lighthouse performance" accent />
 				<Statistic value="1 wk" label="spec to launch" />
 				<Statistic value="0" label="backed dependencies" />

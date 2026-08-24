@@ -14,18 +14,18 @@ export default function PhotoShot({ images, aspectRatio = "1/1" }: PhotoShotProp
 	const shots = Object.values(images);
 
 	return (
-		<div className="flex gap-6">
+		<div className="flex flex-col sm:flex-row gap-6">
 			{shots.map((shot) => (
 				<div
 					key={shot.src}
-					className="relative flex-1 max-w-[50%] border border-hairline"
+					className="relative w-full sm:flex-1 sm:max-w-[50%] border border-hairline"
 					style={{ aspectRatio }}
 				>
 					<Image
 						src={shot.src}
 						alt={shot.alt}
 						fill
-						sizes={`${Math.round(50 / shots.length)}vw`}
+						sizes={`(max-width: 640px) 100vw, ${Math.round(50 / shots.length)}vw`}
 						className="object-cover object-top-left"
 					/>
 				</div>
