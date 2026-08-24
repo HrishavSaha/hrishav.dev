@@ -1,18 +1,9 @@
 import Link from "next/link";
-import { CaseStudyList } from "@/content/case-study-list";
-import { profile } from "@/content/profile";
-import type { spec } from "@/types/CaseStudyTypes";
-
-const padIndex = (index: number) => `${index < 10 ? "0" : ""}${index}`;
-
-const getSpec = (specs: Array<spec>, label: string) =>
-	specs.find((spec) => spec.label === label)?.value ?? "";
+import SocialLinks from "@/components/SocialLinks";
+import { CaseStudyList, caseStudyIds } from "@/content/case-study-list";
+import { getSpec, padIndex } from "@/lib/case-study";
 
 const ROW_GRID = "grid grid-cols-[64px_1fr_140px_180px_120px_100px] gap-4";
-
-const caseStudyIds = Object.keys(
-	CaseStudyList,
-) as Array<keyof typeof CaseStudyList>;
 
 export default function Work() {
 	return (
@@ -65,17 +56,7 @@ export default function Work() {
 			<div className="mt-auto w-full flex items-center justify-between px-12 py-6 border-t border-hairline font-mono text-nav">
 				<p className="text-label">hover a row to open the case study</p>
 
-				<div className="flex gap-6">
-					<a href={`mailto:${profile.socials.email}`} className="text-secondary hover:text-body-text transition-all duration-120">
-						email
-					</a>
-					<a href={profile.socials.github} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-body-text transition-all duration-120">
-						github
-					</a>
-					<a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-body-text transition-all duration-120">
-						linkedin
-					</a>
-				</div>
+				<SocialLinks />
 			</div>
 		</div>
 	);
