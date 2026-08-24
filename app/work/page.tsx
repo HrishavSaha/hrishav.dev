@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
 import { CaseStudyList, caseStudyIds } from "@/content/case-study-list";
 import { getSpec, padIndex } from "@/lib/case-study";
+import { pageMetadata } from "@/lib/seo";
+
+const DESCRIPTION = `selected work - ${caseStudyIds
+	.map((id) => CaseStudyList[id].metadata.title)
+	.join(", ")}. case studies covering the problem, my role, the build and the result.`;
+
+export const metadata: Metadata = pageMetadata({
+	title: "work",
+	description: DESCRIPTION,
+	path: "/work",
+});
 
 const ROW_GRID = "lg:grid lg:grid-cols-[64px_1fr_140px_180px_120px_100px] lg:gap-4";
 

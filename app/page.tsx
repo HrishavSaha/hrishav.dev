@@ -1,11 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import Button from "@/components/Button";
 import CaseStudyCard from "@/components/CaseStudyCard";
+import JsonLd from "@/components/JsonLd";
 import SocialLinks from "@/components/SocialLinks";
 import { CaseStudyList, featuredCaseStudyIds } from "@/content/case-study-list";
 import { profile } from "@/content/profile";
+import { site } from "@/content/site";
 import { padIndex } from "@/lib/case-study";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = {
+	...pageMetadata({
+		title: site.name,
+		socialTitle: site.title,
+		description: site.description,
+		path: "/",
+	}),
+	// absolute: the root default already reads as the home title, unsuffixed
+	title: { absolute: site.title },
+};
 
 /**
  * selected-work grid — one column on mobile, two from `lg` up. to change the
@@ -25,6 +40,8 @@ const META = [
 export default function Home() {
 	return (
 		<div className="w-full min-h-[calc(100dvh-var(--spacing-nav))] bg-surface flex flex-col">
+			<JsonLd />
+
 			<div className="w-full flex flex-col lg:flex-row border-b border-hairline">
 				<div className="flex flex-col w-full lg:w-2/3 xl:w-3/4 px-6 py-16 sm:px-12 sm:py-24 lg:py-30 gap-8 border-b lg:border-b-0 lg:border-r border-hairline">
 					<p className="font-mono text-nav text-secondary">01 / index</p>

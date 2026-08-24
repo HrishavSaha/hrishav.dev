@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import Button from "@/components/Button";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+	title: "services",
+	description:
+		"design, development, or both - web or mobile. fixed scope, fixed price and a clear timeline before anything starts, with a written estimate for every project.",
+	path: "/services",
+});
 
 const padIndex = (index: number) => `${index < 10 ? "0" : ""}${index}`;
 

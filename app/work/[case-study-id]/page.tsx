@@ -1,26 +1,54 @@
-import type { Route } from "next";
+import type { Metadata, Route } from "next";
 import { notFound } from "next/navigation";
-import { CaseStudyList } from "@/content/case-study-list";
+import { CaseStudyList, caseStudyIds, type CaseStudyId } from "@/content/case-study-list";
+import { getSpec, padIndex } from "@/lib/case-study";
+import { pageMetadata } from "@/lib/seo";
 
-const padIndex = (index: number) => `${index < 10 ? "0" : ""}${index}`;
+const isCaseStudyId = (id: string): id is CaseStudyId => id in CaseStudyList;
+
+// prerender every case study at build time instead of rendering on demand
+export function generateStaticParams() {
+	return caseStudyIds.map((id) => ({ "case-study-id": id }));
+}
+
+export async function generateMetadata(
+	props: PageProps<"/work/[case-study-id]">,
+): Promise<Metadata> {
+	const { "case-study-id": caseStudyId } = await props.params;
+
+	if (!isCaseStudyId(caseStudyId)) return {};
+
+	const { metadata } = CaseStudyList[caseStudyId];
+	const path = `/work/${caseStudyId}`;
+
+	return {
+		...pageMetadata({
+			title: metadata.title,
+			description: metadata.summary,
+			path,
+			// this segment generates its own card, per case study
+			image: `${path}/opengraph-image`,
+			type: "article",
+		}),
+		keywords: [
+			getSpec(metadata.specs, "role"),
+			...getSpec(metadata.specs, "stack").split(" · "),
+			"case study",
+		].filter(Boolean),
+	};
+}
 
 export default async function CaseStudy(
 	props: PageProps<"/work/[case-study-id]">,
 ) {
 	const { "case-study-id": caseStudyId } = await props.params;
 
-	const caseStudy = CaseStudyList[caseStudyId as keyof typeof CaseStudyList];
-
-	if (!caseStudy) {
+	if (!isCaseStudyId(caseStudyId)) {
 		notFound();
 	}
 
-	const caseStudyIds = Object.keys(
-		CaseStudyList,
-	) as Array<keyof typeof CaseStudyList>;
-	const currentIndex = caseStudyIds.indexOf(
-		caseStudyId as keyof typeof CaseStudyList,
-	);
+	const caseStudy = CaseStudyList[caseStudyId];
+	const currentIndex = caseStudyIds.indexOf(caseStudyId);
 	const prevIndex =
 		(currentIndex - 1 + caseStudyIds.length) % caseStudyIds.length;
 	const nextIndex = (currentIndex + 1) % caseStudyIds.length;

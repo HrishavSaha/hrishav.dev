@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { profile } from "@/content/profile";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+	title: "contact",
+	description:
+		"tell me what you're building. a couple of sentences is enough to start - i reply to everything within one working day.",
+	path: "/contact",
+});
 
 const stripProtocol = (url: string) => url.replace(/^https?:\/\//, "");
 

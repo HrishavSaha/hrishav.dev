@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { profile } from "@/content/profile";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+	title: "about",
+	description:
+		"designer and developer in equal measure - i work across the whole span of a product, from interface design through to shipped production front-end, for small teams and independent clients.",
+	path: "/about",
+});
 
 const padIndex = (index: number) => `${index < 10 ? "0" : ""}${index}`;
 
