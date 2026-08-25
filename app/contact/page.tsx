@@ -105,13 +105,13 @@ export default function Contact() {
 
 				<div
 					id="brief"
-					className="w-full lg:w-1/2 flex flex-col scroll-mt-[var(--spacing-nav)]"
+					className="w-full lg:w-1/2 flex flex-col scroll-mt-(--spacing-nav)"
 				>
 					<ContactForm />
 				</div>
 			</div>
 
-			<div id="call" className="w-full flex flex-col border-b border-hairline scroll-mt-[var(--spacing-nav)]">
+			<div id="call" className="w-full flex flex-col border-b border-hairline scroll-mt-(--spacing-nav)">
 				<div className="w-full flex flex-col lg:flex-row">
 					<div className="w-full lg:w-1/2 flex flex-col gap-8 px-6 py-12 sm:px-12 lg:py-16 border-b lg:border-b-0 lg:border-r border-hairline">
 						<p className="font-mono text-nav text-secondary">03 / or book a call</p>
