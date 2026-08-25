@@ -92,7 +92,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 				ongoing maintenance and catalog management after launch, which has kept this an active, evolving project
 				rather than a one-off build.
 			</p>
-			<Testimonial
+			{/* <Testimonial
 				quote="hrishav was a delight to work with - extremely responsive, and was able to walk me through
 				the more technical aspects without any issues. he even made a video tutorial to help me manage the
 				back-end of things on my own! From first contacting me through my reddit post, to the final delivery
@@ -101,7 +101,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 				current one."
 				author="alex capece"
 				source="alexcapece.com"
-			/>
+			/> */}
 		</Section>
 
 		<Section index={5} label="takeaway">
