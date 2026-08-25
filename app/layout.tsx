@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
@@ -87,6 +89,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
 				<Navbar />
 				<div className="pt-nav flex-1 flex flex-col">{children}</div>
+
+				<Analytics />
+				<SpeedInsights />
 			</body>
     </html>
   );
