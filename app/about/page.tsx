@@ -108,7 +108,7 @@ export default function About() {
 					<div className="flex flex-col gap-1">
 						<p className="font-mono text-metadata text-label">currently</p>
 						<p className="font-mono text-nav font-bold text-accent">
-							taking on two projects for q3 2026
+							taking on two projects for 2026
 						</p>
 					</div>
 
