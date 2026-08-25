@@ -7,6 +7,10 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// hrishav.dev is verified in Resend for sending only — it has no inbox, so nothing
+// ever lands at this address. Delivery is the `to`/`cc`, replies are the `replyTo`.
+const FROM = "Hrishav Saha <briefs@hrishav.dev>";
+
 function makeReference() {
 	const now = new Date();
 	const yy = String(now.getFullYear()).slice(-2);
@@ -40,10 +44,12 @@ export async function POST(request: Request) {
 	const reference = makeReference();
 
 	const { error } = await resend.emails.send({
-		from: "hrishav.dev <onboarding@resend.dev>",
+		from: FROM,
 		to: profile.socials.email,
-		// cc: email.trim(),
-		replyTo: email.trim(),
+		cc: email.trim(),
+		// Both recipients see the same Reply-To. Listing both keeps a reply from either
+		// side reaching the other, since briefs@hrishav.dev cannot receive mail.
+		replyTo: [email.trim(), profile.socials.email],
 		subject: `project brief — ${name.trim()} (${reference})`,
 		react: EmailTemplate({
 			name: name.trim(),
