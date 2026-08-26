@@ -92,16 +92,14 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 				ongoing maintenance and catalog management after launch, which has kept this an active, evolving project
 				rather than a one-off build.
 			</p>
-			{/* <Testimonial
-				quote="hrishav was a delight to work with - extremely responsive, and was able to walk me through
-				the more technical aspects without any issues. he even made a video tutorial to help me manage the
-				back-end of things on my own! From first contacting me through my reddit post, to the final delivery
-				of my portfolio site, hrishav was a consummate professional and helped me build exactky what i
-				wanted. i would absolutely contact him again if i needed to build a different website or upgrade my
-				current one."
-				author="alex capece"
-				source="alexcapece.com"
-			/> */}
+			<Testimonial
+				quote="Hrishav has been a pleasure to work with. I knew nothing about website design, and he made sure
+				to walk me through every step of the process until I fully understood what was going on. He is
+				professional, friendly, and able to adapt to your needs. Hrishav has a real talent for building websites,
+				and I would highly recommend him to anybody in need of his services."
+				author="Freddy Zaccheo"
+				source="shoparelia.org"
+			/>
 		</Section>
 
 		<Section index={5} label="takeaway">
