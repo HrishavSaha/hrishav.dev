@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import DetailRow, { type Detail } from "@/components/DetailRow";
 import { profile } from "@/content/profile";
 import { pageMetadata } from "@/lib/seo";
 
@@ -11,8 +12,6 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const stripProtocol = (url: string) => url.replace(/^https?:\/\//, "");
-
-type Detail = { label: string; value: string; href?: string; accent?: boolean };
 
 const CONTACT_DETAILS: Array<Detail> = [
 	{ label: "email", value: profile.socials.email, href: `mailto:${profile.socials.email}`, accent: true },
@@ -56,28 +55,6 @@ const CALL_TYPES: Array<{
 		href: profile.calendar.scoping,
 	},
 ];
-
-function DetailRow({ label, value, href, accent }: Detail) {
-	const isExternal = Boolean(href?.startsWith("http"));
-
-	return (
-		<div className="grid grid-cols-[90px_1fr] sm:grid-cols-[120px_1fr] gap-4 py-3 border-b border-hairline-inner font-mono text-metadata">
-			<p className="text-label">{label}:</p>
-			{href ? (
-				<a
-					href={href}
-					target={isExternal ? "_blank" : undefined}
-					rel={isExternal ? "noopener noreferrer" : undefined}
-					className={`break-all ${accent ? "text-accent" : "text-body-text"}`}
-				>
-					{value}
-				</a>
-			) : (
-				<p className="text-body-text">{value}</p>
-			)}
-		</div>
-	);
-}
 
 export default function Contact() {
 	return (

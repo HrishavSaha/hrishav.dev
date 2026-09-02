@@ -5,6 +5,7 @@ import Section from "@/components/Section";
 import PhotoShot from "@/components/PhotoShot";
 import Statistic from "@/components/Statistic";
 import Testimonial from "@/components/Testimonial";
+import { testimonials } from "@/content/testimonials";
 import { type metadata as CaseStudyMetadata, type CaseStudyProps } from "@/types/CaseStudyTypes";
 
 const laptop = {
@@ -91,16 +92,7 @@ export default function AlexCapecePhotography({ nav }: CaseStudyProps) {
 				control to update his work without touching a line of code. it&apos;s live and serving as his
 				primary portfolio for assignments and inquiries.
 			</p>
-			<Testimonial
-				quote="hrishav was a delight to work with - extremely responsive, and was able to walk me through
-				the more technical aspects without any issues. he even made a video tutorial to help me manage the
-				back-end of things on my own! From first contacting me through my reddit post, to the final delivery
-				of my portfolio site, hrishav was a consummate professional and helped me build exactky what i
-				wanted. i would absolutely contact him again if i needed to build a different website or upgrade my
-				current one."
-				author="alex capece"
-				source="alexcapece.com"
-			/>
+			<Testimonial {...testimonials["alex-capece-photography"]} />
 		</Section>
 
 		<Section index={5} label="takeaway">

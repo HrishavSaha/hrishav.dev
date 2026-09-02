@@ -1,7 +1,7 @@
 'use client';
 
 import { FormEvent, ReactNode, useState } from "react";
-import Button from "@/components/Button";
+import Button, { buttonStyles } from "@/components/Button";
 import { profile } from "@/content/profile";
 
 type ProjectType = "design" | "design-build" | "build";
@@ -28,9 +28,6 @@ const PROJECT_TYPES: Array<{ value: ProjectType; label: string }> = [
 	{ value: "design-build", label: "design + build" },
 	{ value: "build", label: "build" },
 ];
-
-const secondaryLinkStyles =
-	"inline-flex items-center justify-center px-3 py-2 font-mono text-nav text-secondary border border-hairline-inner hover:border-body-text hover:text-body-text transition-all duration-120";
 
 function fieldBorder(hasError: boolean) {
 	return `w-full bg-transparent px-3 py-2 font-mono text-base sm:text-nav text-primary-text placeholder:text-label border focus:outline-none focus:border-body-text transition-all duration-120 ${
@@ -223,7 +220,7 @@ export default function ContactForm() {
 					</Button>
 
 					{hasErrors && (
-						<a href={mailtoHref} className={secondaryLinkStyles}>
+						<a href={mailtoHref} className={buttonStyles("secondary")}>
 							email me instead
 						</a>
 					)}

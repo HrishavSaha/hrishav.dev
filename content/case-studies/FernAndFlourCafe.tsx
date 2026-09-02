@@ -4,7 +4,6 @@ import ProjectDuoShot from "@/components/ProjectDuoShot";
 import Section from "@/components/Section";
 import PhotoShot from "@/components/PhotoShot";
 import Statistic from "@/components/Statistic";
-import Testimonial from "@/components/Testimonial";
 import { type metadata as CaseStudyMetadata, type CaseStudyProps } from "@/types/CaseStudyTypes";
 
 const laptop = {

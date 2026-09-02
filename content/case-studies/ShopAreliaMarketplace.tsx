@@ -5,6 +5,7 @@ import Section from "@/components/Section";
 import PhotoShot from "@/components/PhotoShot";
 import Statistic from "@/components/Statistic";
 import Testimonial from "@/components/Testimonial";
+import { testimonials } from "@/content/testimonials";
 import { type metadata as CaseStudyMetadata, type CaseStudyProps } from "@/types/CaseStudyTypes";
 
 const laptop = {
@@ -92,14 +93,7 @@ export default function AreliaShopWithPurpose({ nav }: CaseStudyProps) {
 				ongoing maintenance and catalog management after launch, which has kept this an active, evolving project
 				rather than a one-off build.
 			</p>
-			<Testimonial
-				quote="Hrishav has been a pleasure to work with. I knew nothing about website design, and he made sure
-				to walk me through every step of the process until I fully understood what was going on. He is
-				professional, friendly, and able to adapt to your needs. Hrishav has a real talent for building websites,
-				and I would highly recommend him to anybody in need of his services."
-				author="Freddy Zaccheo"
-				source="shoparelia.org"
-			/>
+			<Testimonial {...testimonials["arelia-shop-with-purpose"]} />
 		</Section>
 
 		<Section index={5} label="takeaway">
