@@ -27,7 +27,7 @@ export const metadata: CaseStudyMetadata = {
 		{ label: 'stack', value: 'next · framer motion' },
 	],
 	status: 'live',
-	liveURL: 'fern-and-flour.vercel.app'
+	liveURL: 'fernandflour.hrishav.dev'
 }
 
 export default function FernAndFlourCafe({ nav }: CaseStudyProps) {
