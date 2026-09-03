@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
 	path: "/work",
 });
 
-const ROW_GRID = "lg:grid lg:grid-cols-[64px_1fr_140px_180px_120px_100px] lg:gap-4";
+const ROW_GRID = "lg:grid lg:grid-cols-[64px_1fr_180px_220px_120px_100px] lg:gap-4";
 
 // the specs shown per row, with the table column each one occupies at desktop
 const SPEC_COLUMNS = [

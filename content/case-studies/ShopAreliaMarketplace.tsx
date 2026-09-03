@@ -31,7 +31,7 @@ export const metadata: CaseStudyMetadata = {
 	specs: [
 		{ label: 'role', value: 'design & development' },
 		{ label: 'duration', value: '4 weeks' },
-		{ label: 'stack', value: 'next · supabase · tailwindcss' },
+		{ label: 'stack', value: 'next · supabase · tailwind' },
 	],
 	status: 'live',
 	liveURL: 'shoparelia.org'
