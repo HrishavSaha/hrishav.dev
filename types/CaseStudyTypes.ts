@@ -4,7 +4,7 @@ export type metadata = {
 	title: string;
 	summary: string;
 	specs: Array<spec>;
-	status: "live" | "archived";
+	status: "live" | "concept" | "archived";
 	liveURL?: string;
 }
 

@@ -25,7 +25,7 @@ export const metadata: CaseStudyMetadata = {
 		{ label: 'duration', value: '3 days' },
 		{ label: 'stack', value: 'next · framer motion' },
 	],
-	status: 'live',
+	status: 'concept',
 	liveURL: 'fernandflour.hrishav.dev'
 }
 
