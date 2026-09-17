@@ -1,5 +1,6 @@
 import type { Metadata, Route } from "next";
 import { notFound } from "next/navigation";
+import CaseStudyJsonLd from "@/components/CaseStudyJsonLd";
 import { CaseStudyList, caseStudyIds, type CaseStudyId } from "@/content/case-study-list";
 import { getSpec, padIndex } from "@/lib/case-study";
 import { pageMetadata } from "@/lib/seo";
@@ -58,6 +59,8 @@ export default async function CaseStudy(
 
 	return (
 		<div className="w-full min-h-[calc(100dvh-var(--spacing-nav))] bg-surface">
+			<CaseStudyJsonLd id={caseStudyId} entry={caseStudy} />
+
 			<CaseStudyComponent
 				nav={{
 					prevHref: `/work/${prevId}` as Route,

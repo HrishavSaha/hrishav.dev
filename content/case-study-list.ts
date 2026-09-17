@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import AlexCapecePhotography, { metadata as alexCapecePhotographyMetadata } from "./case-studies/AlexCapecePhotography";
 import AreliaShopWithPurpose, { metadata as areliaShopWithPurposeMetadata} from "./case-studies/ShopAreliaMarketplace";
+import Batchr, { metadata as batchrMetadata } from "./case-studies/Batchr";
 import FernAndFlourCafe, { metadata as fernAndFlourCafeMetadata} from "./case-studies/FernAndFlourCafe";
 import type { metadata as CaseStudyMetadata, CaseStudyProps } from "@/types/CaseStudyTypes";
 
@@ -31,6 +32,15 @@ export const CaseStudyList = {
 		thumbnail: {
 			src: '/images/AreliaShopWithPurposeDesktop.png',
 			alt: 'arelia — desktop view',
+		},
+		year: '2026',
+	},
+	'batchr': {
+		component: Batchr,
+		metadata: batchrMetadata,
+		thumbnail: {
+			src: '/images/BatchrDesktop.png',
+			alt: 'batchr. — desktop view',
 		},
 		year: '2026',
 	},
