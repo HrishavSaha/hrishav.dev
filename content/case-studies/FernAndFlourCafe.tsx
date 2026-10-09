@@ -33,7 +33,7 @@ export default function FernAndFlourCafe({ nav }: CaseStudyProps) {
 	return (
 		<>
 		<Header index={1} metadata={metadata} nav={nav} />
-		<ProjectDuoShot laptop={laptop} mobile={mobile} laptopWidth="80%" />
+		<ProjectDuoShot laptop={laptop} mobile={mobile} metadata={metadata} laptopWidth="80%" />
 
 		<Section index={1} label="problem">
 			<p className="font-sans text-body text-body-text lowercase">
