@@ -61,12 +61,12 @@ export default function Home() {
 					</p>
 
 					<div className="flex flex-wrap gap-4 sm:gap-6">
-					<Button href="/work">
-						view work
+					<Button href="/contact">
+						start a project
 					</Button>
 
-					<Button href="/contact" variant='secondary'>
-						start a project
+					<Button href="/work" variant='secondary'>
+						view work
 					</Button>
 					</div>
 				</div>
