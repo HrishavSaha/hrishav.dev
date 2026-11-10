@@ -139,12 +139,12 @@ export default function Home() {
 						    rather than stacking under a title that's already left-aligned */}
 						<div className="flex items-baseline justify-between sm:justify-end gap-6 sm:shrink-0 font-mono text-nav">
 							<p className="text-label">{tier.duration}</p>
-							<p className="text-label">
+							{/* <p className="text-label">
 								from{" "}
 								<span className={`font-bold ${tier.highlighted ? "text-accent" : "text-primary-text"}`}>
 									{tier.price}
 								</span>
-							</p>
+							</p> */}
 						</div>
 					</div>
 				))}
