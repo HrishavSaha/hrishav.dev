@@ -67,10 +67,10 @@ export default function Services() {
 							<p className="font-sans text-heading-sm font-medium text-primary-text">
 								{tier.title}
 							</p>
-							<p className="font-mono text-nav">
+							{/* <p className="font-mono text-nav">
 								<span className="text-heading-lg font-bold text-primary-text">{tier.price}</span>{" "}
 								<span className="text-label">from</span>
-							</p>
+							</p> */}
 						</div>
 
 						<div className="flex-1 flex flex-col">
